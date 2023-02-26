@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin',
-            'email' => 'admin@silikit.vn',
+            'email' => 'admin@iris.vn',
             'email_verified_at' => '2023-02-14 18:29:56',
             'password' => Hash::make('123456'),
             'created_at' => '2023-02-14 18:29:56',

@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'title' => 'SILI - KIT',
+    'title' => 'IRIS',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'logo' => '<b>SILI</b> - KIT',
+    'logo' => '<b>IRIS</b>',
     'logo_img' => 'img/favicon.ico',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -180,19 +180,9 @@ return [
 
     'menu' => [
         [
-            'text'  => 'Trang chính',
+            'text'  => 'Giao diện',
             'route' => 'dashboard',
             'icon'  => 'nav-icon fas fa-chart-line',
-        ],
-        [
-            'text'  => 'Sản phẩm',
-            'route' => 'admin.products.index',
-            'icon'  => 'nav-icon fas fa-warehouse',
-        ],
-        [
-            'text'  => 'Bài viết',
-            'route' => 'admin.blog.index',
-            'icon'  => 'nav-icon fas fa-blog',
         ],
         [
             'type'         => 'fullscreen-widget',

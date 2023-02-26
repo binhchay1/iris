@@ -13,5 +13,5 @@
 @endsection
 
 @section('footer')
-<span class="clearfix d-flex bg-gray-light p-4 justify-content-center align-items-center">2022 &copy; Điều hành bởi &nbsp;<b class="fs-4 fst-italic"> SILI - KIT<b></span>
+<span class="clearfix d-flex bg-gray-light p-4 justify-content-center align-items-center">2022 &copy; Điều hành bởi &nbsp;<b class="fs-4 fst-italic"> IRIS<b></span>
 @endsection
