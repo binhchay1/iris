@@ -182,7 +182,7 @@ return [
         [
             'text'  => 'Giao diện',
             'route' => 'dashboard',
-            'icon'  => 'nav-icon fas fa-chart-line',
+            'icon'  => 'nav-icon fas fa-image',
         ],
         [
             'type'         => 'fullscreen-widget',

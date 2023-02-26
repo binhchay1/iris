@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="generator" content="WordPress 6.0.3">
     <meta name="generator" content="WooCommerce 7.0.0">
-    <meta property="og:site_name" content="WebOn">
+    <meta property="og:site_name" content="IRIS">
     <meta property="og:url" content="https://iris.vn">
     <meta property="og:locale" content="en_US">
     <meta property="og:description" content="IRIS landing page">
