@@ -52,7 +52,7 @@
 										<div class="elementor-element elementor-element-a0feea4 elementor-widget elementor-widget-webon_vertical_split_slider" data-id="a0feea4" data-element_type="widget" data-widget_type="webon_vertical_split_slider.default">
 											<div class="elementor-widget-container">
 												<div class="qodef-shortcode qodef-m  qodef-vertical-split-slider qodef-m qodef-disable-below--1024" style="height: 669px;">
-													<div class="ms-left" style="width: 50%; position: absolute; height: 100%; left: 0px; top: 0px; touch-action: none;">
+													<div class="ms-left">
 														<div class="qodef-m-slide-image ms-section ms-table active" data-header-skin="light" style="background-image: url(&quot;https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-2.jpg&quot;); height: 100%;">
 															<div class="ms-tableCell" style="height: 669px">
 																<a itemprop="url" href="https://webon.qodeinteractive.com/our-services/">
@@ -142,7 +142,7 @@
 														</div>
 													</div>
 													<div class="ms-right" style="width: 50%; position: absolute; height: 100%; right: 1px; top: -2007px; touch-action: none;">
-														<div class="qodef-m-slide-image ms-section ms-table" style="background-image: url(&quot;https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-13.jpg&quot;); height: 100%;">
+														<div class="qodef-m-slide-image ms-section ms-table active" style="background-image: url(&quot;https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-13.jpg&quot;); height: 100%;">
 															<div class="ms-tableCell" style="height: 669px">
 																<a itemprop="url" href="https://webon.qodeinteractive.com/pricing-plans/">
 																	<img width="200" height="200" src="https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-14.jpg" class="qodef-m-corner-image" alt="a" loading="lazy" srcset="https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-14.jpg 200w, https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-14-150x150.jpg 150w, https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-14-100x100.jpg 100w" sizes="(max-width: 200px) 100vw, 200px"> </a>
@@ -197,7 +197,7 @@
 																	<img width="200" height="200" src="https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-7.jpg" class="qodef-m-corner-image" alt="a" loading="lazy" srcset="https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-7.jpg 200w, https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-7-150x150.jpg 150w, https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-7-100x100.jpg 100w" sizes="(max-width: 200px) 100vw, 200px"> </a>
 															</div>
 														</div>
-														<div class="qodef-m-slide-content ms-section ms-table active" style="height: 100%;">
+														<div class="qodef-m-slide-content ms-section ms-table" style="height: 100%;">
 															<div class="ms-tableCell" style="height: 669px">
 																<a itemprop="url" href="https://webon.qodeinteractive.com/our-team/">
 																	<img width="200" height="200" src="https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-5.jpg" class="qodef-m-corner-image" alt="a" loading="lazy" srcset="https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-5.jpg 200w, https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-5-150x150.jpg 150w, https://webon.qodeinteractive.com/wp-content/uploads/2020/09/h10-img-5-100x100.jpg 100w" sizes="(max-width: 200px) 100vw, 200px"> </a>
