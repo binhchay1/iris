@@ -14,43 +14,39 @@
 <section class="content mt-4 fnz-style-table">
     <div class="container-fluid">
         <div class="row">
-            @for($i = 0; $i < $page; $i++) <div class="col-lg-12 overflow-auto" id="main-themes">
+            <div class="col-lg-12 overflow-auto" id="main-themes">
                 <div class="card" id="slide-1">
                     <div class="card-header bg-blue">
-                        Slide {{ $i + 1 }}
+                        Slide
                     </div>
-                    <div class="card-body row">
-                        <div class="col-6 d-flex justify-content-around">
-                            <figure class="figure">
-                                <div id="image-preview-background-left-slide-{{ $i + 1 }}" alt="Background left" class="figure-img img-fluid rounded image-preview" data-value="background-left-slide-1"></div>
-                                <input id="uploadFile" type="file" name="image" class="img upload-file" />
-                                <figcaption class="figure-caption text-center">Background left</figcaption>
-                            </figure>
-
-                            <figure class="figure">
-                                <div id="image-preview-small-left-slide-{{ $i + 1 }}" alt="Small image left" class="figure-img img-fluid rounded image-preview" data-value="small-left-slide-1"></div>
-                                <input id="uploadFile" type="file" name="image" class="img upload-file" />
-                                <figcaption class="figure-caption text-center">Small image left</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-6 d-flex justify-content-around">
-                            <figure class="figure">
-                                <div id="image-preview-background-left-slide-{{ $i + 1 }}" alt="Background right" class="figure-img img-fluid rounded image-preview" data-value="background-right-slide-1"></div>
-                                <input id="uploadFile" type="file" name="image" class="img upload-file" />
-                                <figcaption class="figure-caption text-center">Background right</figcaption>
-                            </figure>
-
-                            <figure class="figure">
-                                <div id="image-preview-small-right-slide-{{ $i + 1 }}" alt="Small image right" class="figure-img img-fluid rounded image-preview" data-value="Small-right-slide-1"></div>
-                                <input id="uploadFile" type="file" name="image" class="img upload-file" />
-                                <figcaption class="figure-caption text-center">Small image right</figcaption>
-                            </figure>
+                    <div class="card-body">
+                        <div class="row">
+                            @foreach($themes as $key => $value)
+                            <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                                <div id="image-preview-{{ $key + 1 }}" alt="{{ $value->name }}" class="img-fluid rounded image-preview" data-value="{{ $key + 1 }}" style="background-image: url('{{ asset($value->url) }}');"></div>
+                                <input id="upload-file-{{ $key + 1 }}" type="file" name="image" class="img upload-file" />
+                                <div>Slide {{ $key + 1 }}</div>
+                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-        @endfor
-    </div>
+
+        <div class="row">
+            <div class="col-lg-12 overflow-auto" id="main-themes">
+                <div class="card" id="slide-1">
+                    <div class="card-header bg-blue">
+                        Description
+                    </div>
+                    <div class="card-body row">
+                        <p>Description</p>
+                        <input type="text" class="form-control" id="description" name="description" placeholder="Nhập mô tả" value="{{ old('description', $product->description ?? null) }}">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -59,30 +55,26 @@
     window.addEventListener("load", function() {
         document.getElementById('main-themes').addEventListener("click", function(e) {
             const tgt = e.target;
-            console.log("az clicked", tgt.dataset.value)
+            let id = tgt.dataset.value;
+            let idImage = '#image-preview-' + id;
+            let idUpload = '#upload-file-' + id;
 
-            var files = !!this.files ? this.files : [];
-            if (!files.length || !window.FileReader) return;
+            $(idUpload).click();
 
-            if (/^image/.test(files[0].type)) {
-                var reader = new FileReader();
-                reader.readAsDataURL(files[0]);
+            $(idUpload).on("change", function() {
+                let files = !!this.files ? this.files : [];
+                if (!files.length || !window.FileReader) return;
 
-                reader.onloadend = function() {
-                    $("#image-preview").css("background-image", "url(" + this.result + ")");
+                if (/^image/.test(files[0].type)) {
+                    let reader = new FileReader();
+                    reader.readAsDataURL(files[0]);
+
+                    reader.onloadend = function() {
+                        $(idImage).css("background-image", "url(" + this.result + ")");
+                    }
                 }
-            }
+            });
         })
-    })
-
-    $(function() {
-        $("#uploadFile").on("change", function() {
-
-        });
-    });
-
-    $('#image-preview').click(function() {
-        $('#uploadFile').click();
     });
 </script>
 
@@ -93,7 +85,6 @@
         background-position: center center;
         background-size: cover;
         display: inline-block;
-        background-image: url('img/960x1100.png');
     }
 
     .upload-file {

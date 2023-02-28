@@ -18,8 +18,8 @@ class AdminController extends Controller
     public function viewDashBoard()
     {
         $themes = $this->themesRepository->getListThemes();
-        $page = config('slide.page');
+        $slideNumber = config('slide.page');
 
-        return view('admin.themes.index', compact('themes', 'page'));
+        return view('admin.themes.index', compact('themes', 'slideNumber'));
     }
 }

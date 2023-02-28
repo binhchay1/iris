@@ -16,8 +16,8 @@ class HomeController extends Controller
 
     public function viewHome()
     {
-        $themes = $this->themesRepository->getListThemes();
+        $slides = $this->themesRepository->getListSlide();
 
-        return view('page.home', compact('themes'));
+        return view('page.home', compact('slides'));
     }
 }

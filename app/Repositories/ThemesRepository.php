@@ -44,4 +44,13 @@ class ThemesRepository extends BaseRepository
 
         return $query->get();
     }
+
+    public function getListSlide()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'like', '%slide%')->orderBy('type', 'ASC');
+
+        return $query->get();
+    }
 }
