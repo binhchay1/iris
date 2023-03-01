@@ -7,7 +7,7 @@
 	<div class="page-padding">
 		<div class="nav_container">
 			<a href="/" aria-current="page" class="nav_logo-link w-nav-brand w--current" aria-label="home">
-				<img src="{{ asset('img/logo.png') }}" loading="lazy" height="64" alt="IRIS">
+				<img src="{{ asset('img/favicon.ico') }}" loading="lazy" height="90" alt="IRIS">
 			</a>
 			<div class="nav_container d-flex justify-content-end">
 				<nav role="navigation" class="nav_menu-wrapper w-nav-menu">
@@ -30,11 +30,13 @@
 </div>
 <main>
 	<div>
-		@foreach($slides as $slide)
-		<div class="carousel-item">
+		@foreach($slides as $key => $slide)
+		<div class="carousel-item" data-id="{{ $key }}">
 			<img src="{{ asset($slide->url) }}" width="1920" height="1080" alt="{{ $slide->name }}">
 		</div>
 		@endforeach
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
 	</div>
 	<header>
 		<div class="page-padding">
@@ -42,7 +44,7 @@
 				<div class="container-large">
 					<div class="padding-vertical title-padding">
 						<div class="hero-logo-placeholder hide-tablet overflow-hidden">
-							<img src="{{ asset('img/logo.png') }}" loading="lazy" height="160" alt="IRIS">
+							<img src="{{ asset('img/logo.png') }}" loading="lazy" height="450" alt="IRIS">
 						</div>
 					</div>
 				</div>
@@ -123,6 +125,30 @@
 				}
 			}
 		}, 4000);
+	}
+
+	var slideIndex;
+
+	function plusSlides(n) {
+		let slide = document.getElementsByClassName("carousel-item active")[0];
+		slideIndex = parseInt(slide.getAttribute("data-id"));
+
+		showSlides(slideIndex += n);
+	}
+
+	function showSlides(n) {
+		let slides = document.getElementsByClassName("carousel-item");
+
+		for (let i = 0; i < slides.length; i++) {
+			if (slides[i].classList.contains("active")) {
+				slides[i].classList.remove("active");
+			}
+		}
+		if (n >= 4) {
+			n = 0;
+		}
+
+		slides[n].classList.add("active");
 	}
 </script>
 @stop
