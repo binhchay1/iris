@@ -17,26 +17,26 @@ class ThemesSeeder extends Seeder
     {
         Themes::create([
             'name' => 'Slide 1',
-            'type' => 'slide-1',
-            'url' => 'img/1280x1252.png',
+            'type' => 'slide',
+            'url' => 'img/1920x1080.png',
         ]);
 
         Themes::create([
             'name' => 'Slide 2',
-            'type' => 'slide-2',
-            'url' => 'img/1280x1252.png',
+            'type' => 'slide',
+            'url' => 'img/1920x1080.png',
         ]);
 
         Themes::create([
             'name' => 'Slide 3',
-            'type' => 'slide-3',
-            'url' => 'img/1280x1252.png',
+            'type' => 'slide',
+            'url' => 'img/1920x1080.png',
         ]);
 
         Themes::create([
             'name' => 'Slide 4',
-            'type' => 'slide-4',
-            'url' => 'img/1280x1252.png',
+            'type' => 'slide',
+            'url' => 'img/1920x1080.png',
         ]);
     }
 }

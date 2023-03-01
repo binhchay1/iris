@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Config extends Model
+class Configs extends Model
 {
     use HasFactory;
 
@@ -15,8 +15,7 @@ class Config extends Model
 
     protected $fillable = [
         'id',
-        'name',
         'type',
-        'url'
+        'note'
     ];
 }

@@ -44,4 +44,49 @@ class ConfigsRepository extends BaseRepository
 
         return $query->get();
     }
+
+    public function getDescription()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'description');
+
+        return $query->get();
+    }
+
+    public function getFacebook()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'facebook');
+
+        return $query->get();
+    }
+
+    public function getSdt()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'sdt');
+
+        return $query->get();
+    }
+
+    public function getYoutube()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'youtube');
+
+        return $query->get();
+    }
+
+    public function getInsta()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'insta');
+
+        return $query->get();
+    }
 }

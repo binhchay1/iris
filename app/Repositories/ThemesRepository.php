@@ -36,20 +36,20 @@ class ThemesRepository extends BaseRepository
         require $query->where('id', $id)->get();
     }
 
-    public function getListThemes()
+    public function getListThemesSlide()
     {
         $query = $this->model->query();
 
-        $query = $query->orderBy('id', 'DESC');
+        $query = $query->where('type', 'slide')->orderBy('type', 'ASC');
 
         return $query->get();
     }
 
-    public function getListSlide()
+    public function getListThemesPartner()
     {
         $query = $this->model->query();
 
-        $query = $query->where('type', 'like', '%slide%')->orderBy('type', 'ASC');
+        $query = $query->where('type', 'partner')->orderBy('type', 'ASC');
 
         return $query->get();
     }
