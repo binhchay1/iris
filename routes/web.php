@@ -19,6 +19,7 @@ Route::get('/', [HomeController::class, 'viewHome'])->name('homepage');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'viewDashBoard'])->name('dashboard');
+    Route::get('/upload-image', [AdminController::class, 'saveSlide'])->name('upload-image');
 });
 
 require __DIR__ . '/auth.php';

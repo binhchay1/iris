@@ -53,7 +53,7 @@
 									<h1 class="home-h1">Sam Kolder is a world-renowned filmmaker that inspired a generation of content creators from all around the world</h1>
 								</div>
 								<div class="margin-top margin-medium">
-									<div class="button-wrap"><a data-w-id="2c3f640d-08a3-22a3-281c-51be9deaf735" href="/contact" class="button w-button" style="">Get in touch</a><a data-w-id="cbcf97cd-d895-93ae-1047-81b09a1b08ba" href="https://www.koldercreative.com/" target="_blank" class="button-secondary w-button" style="">Master Class</a></div>
+									<div class="button-wrap"><a data-w-id="2c3f640d-08a3-22a3-281c-51be9deaf735" href="/contact" class="button w-button">Get in touch</a><a data-w-id="cbcf97cd-d895-93ae-1047-81b09a1b08ba" href="https://www.koldercreative.com/" target="_blank" class="button-secondary w-button" style="">Master Class</a></div>
 								</div>
 							</div>
 						</div>
