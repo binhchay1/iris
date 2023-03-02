@@ -51,12 +51,10 @@
 				</div>
 				<div class="home-text-wrap">
 					<div class="container-xsmall">
-						<div class="padding-vertical padding-xhuge is-home-hero">
-							<div class="overflow-hidden">
-								@if($descriptions->isNotEmpty())
-								<h1 class="home-h1">{{ $descriptions[0]->note }}</h1>
-								@endif
-							</div>
+						<div class="overflow-hidden" style="padding-bottom: 7rem;">
+							@if($descriptions->isNotEmpty())
+							<h1 class="home-h1">{{ $descriptions[0]->note }}</h1>
+							@endif
 						</div>
 					</div>
 				</div>
