@@ -118,13 +118,14 @@
 		setInterval(function() {
 			for (var i = 0; i < slides.length; i++) {
 				if (i + 1 == slides.length) {
+					slides[i].removeAttribute('style');
+					setTimeout(removeActive, 450, slides[i]);
 					addActive(slides[0]);
-					setTimeout(removeActive, 450, slides[i]); //Doesn't be worked in IE-9
 					break;
 				}
 				if (slides[i].classList.contains('active')) {
 					slides[i].removeAttribute('style');
-					setTimeout(removeActive, 450, slides[i]); //Doesn't be worked in IE-9
+					setTimeout(removeActive, 450, slides[i]);
 					addActive(slides[i + 1]);
 					break;
 				}
