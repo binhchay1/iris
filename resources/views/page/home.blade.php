@@ -7,27 +7,28 @@
 	<div class="page-padding">
 		<div class="nav_container">
 			<a href="/" aria-current="page" class="nav_logo-link w-nav-brand w--current" aria-label="home">
-				<img src="{{ asset('img/favicon.ico') }}" loading="lazy" height="90" alt="IRIS">
+				<img src="{{ asset('img/favicon.ico') }}" loading="lazy" height="70" alt="IRIS">
 			</a>
 			<div class="nav_container d-flex justify-content-end">
 				<nav role="navigation" class="nav_menu-wrapper w-nav-menu">
 					<div class="nav_link-wrapper">
-						<a href="/filmmaking" class="nav_link">
+						<a data-menuanchor="firstPage" href="#firstPage" class="nav_link">
 							<div>
 								<img src="{{ asset('svg/external-link.svg') }}" loading="eager" alt="" class="nav_external-link-indicator">Work
 							</div>
 						</a>
-						<a href="https://www.koldercreative.com/" target="_blank" class="nav_external-link w-inline-block">About Me</a>
-						<a href="https://samkolderpresets.com/" target="_blank" class="nav_external-link w-inline-block">
+						<a data-menuanchor="secondPage" href="#secondPage" target="_blank" class="nav_external-link w-inline-block">About Me</a>
+						<a data-menuanchor="thirdPage" href="#thirdPage" target="_blank" class="nav_external-link w-inline-block">
 							<div>Equipment</div>
-						</a><a href="/contact" class="nav_link">Partner</a>
-						</a><a href="/contact" class="nav_link">Contact</a>
-					</div>
+						</a>
+						<a data-menuanchor="fourthPage" href="#fourthPage" class="nav_link">Partner</a>
+						<a data-menuanchor="fifthPage" href="#fifthPage" class="nav_link">Contact</a>
 				</nav>
 			</div>
 		</div>
 	</div>
 </div>
+
 <main>
 	<div>
 		@foreach($slides as $key => $slide)
@@ -100,6 +101,10 @@
 <script type="text/javascript" src="{{ asset('js/plus/jquery.easing.1.3.js') }}" id="jquery-easing-1.3-js"></script>
 <script type="text/javascript" src="{{ asset('js/plus/jquery.multiscroll.min.js') }}" id="multiscroll-js"></script>
 <script>
+	$(document).ready(function() {
+		$('#multiscroll').multiscroll();
+	});
+
 	window.onload = function() {
 		var slides = document.getElementsByClassName('carousel-item'),
 			addActive = function(slide) {
@@ -114,17 +119,17 @@
 			for (var i = 0; i < slides.length; i++) {
 				if (i + 1 == slides.length) {
 					addActive(slides[0]);
-					setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
+					setTimeout(removeActive, 450, slides[i]); //Doesn't be worked in IE-9
 					break;
 				}
 				if (slides[i].classList.contains('active')) {
 					slides[i].removeAttribute('style');
-					setTimeout(removeActive, 350, slides[i]); //Doesn't be worked in IE-9
+					setTimeout(removeActive, 450, slides[i]); //Doesn't be worked in IE-9
 					addActive(slides[i + 1]);
 					break;
 				}
 			}
-		}, 4000);
+		}, 8000);
 	}
 
 	var slideIndex;
