@@ -185,6 +185,16 @@ return [
             'icon'  => 'nav-icon fas fa-image',
         ],
         [
+            'text'  => 'Thành viên',
+            'route' => 'admin.members.index',
+            'icon'  => 'nav-icon fas fa-user',
+        ],
+        [
+            'text'  => 'Dịch vụ',
+            'route' => 'admin.services.index',
+            'icon'  => 'nav-icon fas fa-warehouse',
+        ],
+        [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],

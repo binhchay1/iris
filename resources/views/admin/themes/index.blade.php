@@ -85,7 +85,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <input type="hidden" value="{{ $value->id }}" name="id">
-                                        <button type="submit"><i class="fas fa-file-excel" style="background-color: red;"></i></button>
+                                        <button type="submit" class="btn-x">X</button>
                                     </div>
                                 </form>
                                 <form method="post" action="{{ route('upload-partner') }}" enctype="multipart/form-data" id="upload-file-form-partner-{{ $key + 1 }}">

@@ -24,10 +24,19 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//s.w.org">
-    <link rel="stylesheet" id="multiscroll-css" href="{{ asset('css/plus/jquery.multiscroll.css') }}" type="text/css" media="all">
     <link rel="stylesheet" id="header-css" href="{{ asset('css/page/header.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.cdnfonts.com/css/gilroy" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick/slick-theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/spacing.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
     @yield('style')
 </head>
 

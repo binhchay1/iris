@@ -291,6 +291,7 @@ input {
         flex-direction: row !important;
     }
 }
+
 .dropdown-toggle::after {
     margin-right: 7px;
 }
@@ -307,4 +308,11 @@ input {
     margin: 0 !important;
     padding-bottom: 10px;
     float: right;
+}
+
+.btn-x {
+    border: none;
+    background: none;
+    color: red;
+    font-weight: bold;
 }
