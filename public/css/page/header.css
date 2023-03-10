@@ -5523,3 +5523,8 @@ a {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+
+.home-section {
+    width: 100%;
+    height: 1080px;
+}
