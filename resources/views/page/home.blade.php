@@ -32,11 +32,11 @@
 	</div>
 </section>
 
-<section class="h-100" id="home">
+<section style="height: 1080px;" id="home">
 	<div>
 		@foreach($slides as $key => $slide)
 		<div class="carousel-item" data-id="{{ $key }}">
-			<img src="{{ asset($slide->url) }}" width="100%" height="970" alt="{{ $slide->name }}">
+			<img src="{{ asset($slide->url) }}" alt="{{ $slide->name }}">
 		</div>
 		@endforeach
 		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -132,8 +132,9 @@
 <section class="pt-40 pb-40" id="services">
 	<div class="page-padding">
 		<div class="container-large">
-			<div class="padding-top padding-xhuge">
-
+			<div class="headline_component">
+				<div class="subheading">Services</div>
+				<div class="headline_divider"></div>
 			</div>
 			<div class="padding-bottom padding-xxhuge padding-top">
 				<div class="margin-top margin-large">
