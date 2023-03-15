@@ -130,7 +130,7 @@
 			<div class="equipment-list">
 				<div class="equipment-item bg-secondary">
 					<img src="img/equipment/e1.png" alt="">
-					<span class="equipment-name">Red DSMC2 BRAIN HELIUM 8K S35</span>
+					<span class="equipment-name">Other items</span>
 				</div>
 			</div>
 		</div>
