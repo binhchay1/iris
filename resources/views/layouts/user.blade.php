@@ -20,7 +20,7 @@
 
     <title>@yield('title')</title>
 
-    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img/logo-black.png') }}" type="image/x-icon">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//s.w.org">

@@ -15,7 +15,7 @@
 						<div class="nav_link-wrapper">
 							<a href="#work" class="nav_link">
 								<div>
-									<img src="{{ asset('svg/external-link.svg') }}" loading="eager" alt="" class="nav_external-link-indicator">Work
+									<img src="{{ asset('svg/external-link.svg') }}" loading="eager" class="nav_external-link-indicator">Work
 								</div>
 							</a>
 							<a href="#aboutus" class="nav_external-link" style="margin-top: -2px;">About Us</a>
@@ -48,17 +48,23 @@
 				<div class="container-large">
 					<div class="padding-vertical title-padding">
 						<div class="hero-logo-placeholder overflow-hidden">
-							<img src="{{ asset('img/logo.png') }}" loading="lazy" height="450" alt="IRIS">
+							<img src="{{ asset('img/logo.png') }}" loading="lazy" height="350" alt="IRIS">
 						</div>
 					</div>
 				</div>
-				<div class="home-text-wrap">
+				<div class="home-text-wrap mt-5">
 					<div class="container-xsmall">
-						<div class="overflow-hidden" style="padding-bottom: 7rem;">
+						<div class="overflow-hidden">
 							@if($descriptions->isNotEmpty())
 							<h1 class="home-h1">{{ $descriptions[0]->note }}</h1>
 							@endif
 						</div>
+					</div>
+				</div>
+				<div class="margin-medium">
+					<div class="button-wrap">
+						<a data-w-id="2c3f640d-08a3-22a3-281c-51be9deaf735" href="#contact" class="button w-button" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Get in touch</a>
+						<a data-w-id="cbcf97cd-d895-93ae-1047-81b09a1b08ba" href="#work" target="_blank" class="button-secondary w-button" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Master Class</a>
 					</div>
 				</div>
 			</div>
@@ -79,8 +85,48 @@
 	</div>
 </section>
 
+<section class="section-relative" id="work">
+	<div class="page-padding">
+		<div class="container-large">
+			<div id="work" class="padding-top padding-xhuge">
+				<div class="headline_component">
+					<h2 class="subheading">Work</h2>
+					<div class="headline_divider"></div>
+				</div>
+			</div>
+			<div class="margin-top margin-xlarge">
+				<div class="work_component"><a href="/filmmaking" class="work_item is-left w-inline-block">
+						<div class="work_item-img">
+							<div class="work_item-overlay" style="opacity: 1;"></div><img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp 1080w" alt="Sam Kolder films" class="div-square is-work-img">
+						</div>
+						<div class="work_item-text">
+							<div class="overflow-hidden">
+								<h2 class="heading-display" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Films</h2>
+							</div>
+							<div class="margin-top margin-xsmall overflow-hidden">
+								<p class="work_item-par" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Renowned for pushing his creative limits. Sam's work is best-known for his unique style of video editing that influenced a new era of content creation &amp; storytelling.</p>
+							</div>
+						</div>
+					</a><a href="https://www.instagram.com/samkolder/" target="_blank" class="work_item is-right is-no-transform w-inline-block">
+						<div class="work_item-img is-right">
+							<div class="work_item-overlay" style="opacity: 1;"></div><img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp 1080w" alt="Sam Kolder in Dubai" class="div-square is-work-img">
+						</div>
+						<div class="work_item-text is-right">
+							<div class="overflow-hidden">
+								<h2 class="heading-display" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Photography</h2>
+							</div>
+							<div class="margin-top margin-xsmall overflow-hidden">
+								<p class="work_item-par" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Creative moments from Sam's life and work. Share your brand's story and mission from a new perspective.</p>
+							</div>
+						</div>
+					</a></div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="padding-xhuge" id="aboutus">
-	<div class="container p-0">
+	<div class="p-0">
 		<div class="row">
 			<div class="col-lg-6 col-md-12 col-sm-12 p-20 aos-init aos-animate" data-aos="fade-up">
 				<div class="about-us-content">
@@ -241,6 +287,9 @@
 										<div class="margin-top margin-small"><input type="submit" value="Submit" data-wait="Please wait..." class="button is-form-submit w-button"></div>
 									</form>
 								</div>
+								<div class="form-overlay"></div>
+								<div class="hide-tablet"></div>
+								<img src="{{ asset('img/contact-form.jpg') }}" loading="lazy" sizes="(max-width: 991px) 100vw, 876.921875px" class="form-image hide-tablet" style="opacity: 75%;">
 							</div>
 						</div>
 					</div>
@@ -339,6 +388,7 @@
 	function plusSlides(n) {
 		let slide = document.getElementsByClassName("carousel-item active")[0];
 		slideIndex = parseInt(slide.getAttribute("data-id"));
+		console.log(slideIndex);
 
 		showSlides(slideIndex += n);
 	}
@@ -353,6 +403,9 @@
 		}
 		if (n >= 4) {
 			n = 0;
+		}
+		if (n == -1) {
+			n = slides.length - 1;
 		}
 
 		slides[n].classList.add("active");

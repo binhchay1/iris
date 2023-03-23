@@ -20,7 +20,7 @@
     <link href="{{ asset('css/common.css') }}" rel="stylesheet">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     @yield('style')
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo-black.png" rel="icon">
 
 </head>
 
