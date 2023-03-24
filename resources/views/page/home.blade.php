@@ -8,7 +8,7 @@
 		<div class="page-padding">
 			<div class="nav_container">
 				<a href="/" aria-current="page" class="nav_logo-link w-nav-brand w--current" aria-label="home">
-					<img src="{{ asset('img/favicon.ico') }}" loading="lazy" height="70" alt="IRIS">
+					<img src="{{ asset('img/favicon.ico') }}" loading="lazy" height="30" alt="IRIS">
 				</a>
 				<div class="nav_container d-flex justify-content-end">
 					<nav role="navigation" class="nav_menu-wrapper w-nav-menu">
@@ -90,14 +90,17 @@
 		<div class="container-large">
 			<div id="work" class="padding-top padding-xhuge">
 				<div class="headline_component">
-					<h2 class="subheading">Work</h2>
+					<h2 class="subheading">Services</h2>
 					<div class="headline_divider"></div>
 				</div>
 			</div>
+			@foreach($services as $key => $service)
 			<div class="margin-top margin-xlarge">
-				<div class="work_component"><a href="/filmmaking" class="work_item is-left w-inline-block">
+				<div class="work_component">
+					<a href="/filmmaking" class="work_item is-left w-inline-block">
 						<div class="work_item-img">
-							<div class="work_item-overlay" style="opacity: 1;"></div><img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp 1080w" alt="Sam Kolder films" class="div-square is-work-img">
+							<div class="work_item-overlay" style="opacity: 1;"></div>
+							<img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp 1080w" alt="Sam Kolder films" class="div-square is-work-img">
 						</div>
 						<div class="work_item-text">
 							<div class="overflow-hidden">
@@ -107,9 +110,11 @@
 								<p class="work_item-par" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Renowned for pushing his creative limits. Sam's work is best-known for his unique style of video editing that influenced a new era of content creation &amp; storytelling.</p>
 							</div>
 						</div>
-					</a><a href="https://www.instagram.com/samkolder/" target="_blank" class="work_item is-right is-no-transform w-inline-block">
+					</a>
+					<a href="https://www.instagram.com/samkolder/" target="_blank" class="work_item is-right is-no-transform w-inline-block">
 						<div class="work_item-img is-right">
-							<div class="work_item-overlay" style="opacity: 1;"></div><img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp 1080w" alt="Sam Kolder in Dubai" class="div-square is-work-img">
+							<div class="work_item-overlay" style="opacity: 1;"></div>
+							<img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp 1080w" alt="Sam Kolder in Dubai" class="div-square is-work-img">
 						</div>
 						<div class="work_item-text is-right">
 							<div class="overflow-hidden">
@@ -121,6 +126,7 @@
 						</div>
 					</a></div>
 			</div>
+			@endforeach
 		</div>
 	</div>
 </section>
@@ -177,58 +183,6 @@
 				<div class="equipment-item bg-secondary">
 					<img src="img/equipment/e1.png" alt="">
 					<span class="equipment-name">Other items</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="pt-40 pb-40" id="services">
-	<div class="page-padding">
-		<div class="container-large">
-			<div class="headline_component">
-				<div class="subheading">Services</div>
-				<div class="headline_divider"></div>
-			</div>
-			<div class="padding-bottom padding-xxhuge padding-top">
-				<div class="margin-top margin-large">
-					<h1 class="max-width-large">Films by Sam Kolder</h1>
-					<div class="margin-top margin-medium max-width-large">
-						<p class="text-size-medium">A collection of some of Sam's best work including drone reel compilations, <br>creative storytelling, travel vlogs &amp; client work.</p>
-					</div>
-				</div>
-				<div class="margin-top margin-huge">
-					<div class="works_component w-dyn-list">
-						<div role="list" class="works_list w-dyn-items">
-							@foreach($services as $key => $service)
-							@if($key % 2 == 0)
-							<div role="listitem" class="works_item w-dyn-item">
-								<iframe width="854" height="480" src="{{ $service->url }}" frameBorder="0" scrolling="no"></iframe>
-								<div class="works_txt">
-									<h2 class="heading-small">{{ $service->name }}</h2>
-									<div class="margin-top margin-small max-width-large">
-										<div class="w-richtext">
-											<p>{{ $service->description }}</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							@else
-							<div role="listitem" class="works_item w-dyn-item" style="flex-direction: row-reverse;">
-								<iframe width="854" height="480" src="{{ $service->url }}" frameBorder="0" scrolling="no"></iframe>
-								<div class="works_txt">
-									<h2 class="heading-small">{{ $service->name }}</h2>
-									<div class="margin-top margin-small max-width-large">
-										<div class="w-richtext">
-											<p>{{ $service->description }}</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							@endif
-							@endforeach
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
