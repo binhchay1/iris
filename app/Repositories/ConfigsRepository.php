@@ -89,4 +89,13 @@ class ConfigsRepository extends BaseRepository
 
         return $query->get();
     }
+
+    public function getAboutUs()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'about-us');
+
+        return $query->first();
+    }
 }

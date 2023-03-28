@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateServiceRequest extends FormRequest
+class WorkRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,20 +24,22 @@ class UpdateServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'max:255'],
             'description' => ['required'],
-            'url' => ['required'],
+            'img' => ['required'],
+            'type' => ['required'],
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => 'Tên không được để trống.',
-            'name.string' => 'Tên không đúng định dạng.',
-            'name.max' => 'Tên không vượt quá 255 kí tự.',
+            'title.required' => 'Tên không được để trống.',
+            'title.string' => 'Tên không đúng định dạng.',
+            'title.max' => 'Tên không vượt quá 255 kí tự.',
             'description.required' => 'Nội dung không được để trống.',
-            'url.required' => 'Đường dẫn không được để trống.',
+            'img.required' => 'Ảnh không được để trống.',
+            'type.required' => 'Loại không được để trống.',
         ];
     }
 }

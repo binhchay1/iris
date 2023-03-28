@@ -195,6 +195,11 @@ return [
             'icon'  => 'nav-icon fas fa-warehouse',
         ],
         [
+            'text'  => 'Công việc',
+            'route' => 'admin.works.index',
+            'icon'  => 'nav-icon fas fa-tasks',
+        ],
+        [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],

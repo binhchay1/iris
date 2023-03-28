@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/upload-description', [AdminController::class, 'saveDescription'])->name('upload-description');
     Route::post('/upload-partner', [AdminController::class, 'savePartner'])->name('upload-partner');
     Route::post('/upload-social', [AdminController::class, 'saveSocial'])->name('upload-social');
+    Route::post('/upload-about-us', [AdminController::class, 'saveAboutUs'])->name('upload-about-us');
     Route::post('/create-partner', [AdminController::class, 'createPartner'])->name('create-partner');
     Route::post('/delete-partner', [AdminController::class, 'deletePartner'])->name('delete-partner');
 
@@ -44,6 +46,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/update/{service}', [ServiceController::class, 'updateService'])->name('admin.update.services');
         Route::post('/store', [ServiceController::class, 'storeService'])->name('admin.store.services');
         Route::get('/delete/{id}', [ServiceController::class, 'deleteService'])->name('admin.delete.services');
+    });
+
+    Route::group(['prefix' => 'work'], function () {
+        Route::get('/', [WorkController::class, 'listWorkAdmin'])->name('admin.works.index');
+        Route::get('/add', [WorkController::class, 'createWork'])->name('admin.create.works');
+        Route::get('/update/{work}', [WorkController::class, 'viewUpdateWork'])->name('admin.update.works.view');
+        Route::post('/update/{work}', [WorkController::class, 'updateWork'])->name('admin.update.works');
+        Route::post('/store', [WorkController::class, 'storeWork'])->name('admin.store.works');
+        Route::get('/delete/{id}', [WorkController::class, 'deleteWork'])->name('admin.delete.works');
     });
 });
 

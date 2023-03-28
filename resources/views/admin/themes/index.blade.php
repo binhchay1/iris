@@ -168,10 +168,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-12 overflow-auto" id="main-themes-partner">
+                <div class="card" id="slide-1">
+                    <div class="card-header bg-blue">
+                        About Us
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <form method="post" action="{{ route('upload-about-us') }}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <div>
+                                        <textarea name="description" id="editor"></textarea>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('img/preview-frame-icon.png') }}" id="previewImg" class="p-0" alt="100x40" style="min-width: 100px; max-height: 100px;" />
+                                        <input type="file" class="form-control input-image-preview" name="img" onchange="previewFile(this)">
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-success mt-2" type="submit" id="submit-about-us">Thay đổi</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 <script>
     window.addEventListener("load", function() {
         document.getElementById('main-themes-slide').addEventListener("click", function(e) {
@@ -211,6 +241,25 @@
             });
         });
     });
+
+    var aboutUs = <?php echo json_encode($aboutUs); ?>;
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(newEditor => {
+            window.editor = newEditor;
+            editor = newEditor;
+            editor.setData(aboutUs.description);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    document.querySelector('#submit-about-us').addEventListener('click', () => {
+        const editorData = editor.getData();
+        var textArea = document.getElementById('editor');
+        textArea.innerHTML = editorData;
+    });
+    
 </script>
 
 <style>

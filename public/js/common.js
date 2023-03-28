@@ -1,5 +1,5 @@
 function previewFile(input) {
-    const file = $("input[type=file]").get(0).files[0];
+    const file = $(input).get(0).files[0];
     const extension = $(input).val().split('.').pop().toLowerCase();
     var validFileExtensions = ['jpeg', 'jpg', 'png', 'bmp'];
     if ($.inArray(extension, validFileExtensions) == -1) {
@@ -13,6 +13,7 @@ function previewFile(input) {
         $(input).replaceWith($(input).val('').clone(true));
         return;
     }
+
     if (file) {
         const reader = new FileReader();
         reader.onload = function () {

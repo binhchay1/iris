@@ -90,43 +90,53 @@
 		<div class="container-large">
 			<div id="work" class="padding-top padding-xhuge">
 				<div class="headline_component">
-					<h2 class="subheading">Services</h2>
+					<h2 class="subheading">Work</h2>
 					<div class="headline_divider"></div>
 				</div>
 			</div>
-			@foreach($services as $key => $service)
 			<div class="margin-top margin-xlarge">
+				@foreach($works as $key => $work)
 				<div class="work_component">
-					<a href="/filmmaking" class="work_item is-left w-inline-block">
+					@if(!empty($work['left']))
+					<a href="javascript:void(0)" class="work_item is-left w-inline-block">
 						<div class="work_item-img">
 							<div class="work_item-overlay" style="opacity: 1;"></div>
-							<img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631eefb21013443921dd8bed_film.webp 1080w" alt="Sam Kolder films" class="div-square is-work-img">
+							<img src="{{ asset($work['left']->image) }}" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" class="div-square is-work-img">
 						</div>
 						<div class="work_item-text">
 							<div class="overflow-hidden">
-								<h2 class="heading-display" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Films</h2>
+								<h2 class="heading-display">{{ $work['left']->title }}</h2>
 							</div>
 							<div class="margin-top margin-xsmall overflow-hidden">
-								<p class="work_item-par" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Renowned for pushing his creative limits. Sam's work is best-known for his unique style of video editing that influenced a new era of content creation &amp; storytelling.</p>
+								<p class="work_item-par">{{ $work['left']->description }}</p>
 							</div>
 						</div>
 					</a>
-					<a href="https://www.instagram.com/samkolder/" target="_blank" class="work_item is-right is-no-transform w-inline-block">
+					@endif
+					@if(!empty($work['right']))
+					<a href="javascript:void(0)" target="_blank" class="work_item is-right is-no-transform w-inline-block">
 						<div class="work_item-img is-right">
 							<div class="work_item-overlay" style="opacity: 1;"></div>
-							<img src="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" srcset="https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-500.webp 500w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-800.webp 800w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo-p-1080.webp 1080w, https://uploads-ssl.webflow.com/62bee10754dc8848a548f80d/631ef4cac393e6108cb58d36_photo.webp 1080w" alt="Sam Kolder in Dubai" class="div-square is-work-img">
+							<img src="{{ asset($work['right']->image) }}" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 991px) 82vw, 37vw" class="div-square is-work-img">
 						</div>
 						<div class="work_item-text is-right">
 							<div class="overflow-hidden">
-								<h2 class="heading-display" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Photography</h2>
+								<h2 class="heading-display">{{ $work['right']->title }}</h2>
 							</div>
 							<div class="margin-top margin-xsmall overflow-hidden">
-								<p class="work_item-par" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Creative moments from Sam's life and work. Share your brand's story and mission from a new perspective.</p>
+								<p class="work_item-par">{{ $work['right']->description }}</p>
 							</div>
 						</div>
-					</a></div>
+					</a>
+					@endif
+				</div>
+				@if($key != array_key_last($works))
+				<div class="headline_component">
+					<div class="headline_divider" style="width: 0px !important;"></div>
+				</div>
+				@endif
+				@endforeach
 			</div>
-			@endforeach
 		</div>
 	</div>
 </section>
@@ -139,23 +149,14 @@
 					<h3 class="section-title">
 						About US
 					</h3>
-					<p class="section-text">
-						Năm 2020, cùng những thách thức mang tính toàn cầu như việc giới hạn mở của từng quốc gia, sự đứt gãy dòng chảy kinh tế là sự phát triẻn mạnh mẽ của các nền tảng công nghệ và sáng kiến để doanh nghiệp bức phá
-					</p>
-					<p class="section-text">
-						Trong xu hướng phát triển chung, trên nền tảng sức mạnh nội lực của từng bên, các doanh nghiệp Việt đang có sự xích lại, hợp tác mạnh mẽ, cùng nhau đi nhanh và đi xa hơn không chỉ trên thị trường trong nước và quốc tế. Để làm được điều này, ngoài tiềm lực về chuyên môn, kinh tế, các doanh nghiệp cần những đối tác chuyên nghiệp hỗ trợ về truyền thông quảng cáo, cũng như các dịch vụ Marketing bài bản, cạnh tranh và thấu hiểu thị trường
-					</p>
-					<p class="section-text">
-						Dựa trên nhu cầu này, LHMotion được thành lập, giải quyết khát khao của thị Dựa trên nhu cầu này, LHMotion được thành lập, giải quyết khát khao của thị trường về một doanh nghiệp mạnh về truyền thông, quảng cáo và Marketing, đồng bộ về tư duy sáng tạo, giải pháp tối ưu, cơ sở hạ tầng hiện đại để nâng tầm sản phẩm, dịch vụ của mỗi bên mà chúng tôi có hân hạnh trở thành đối tác phục vụ.trường về một doanh nghiệp mạnh về truyền thông, quảng cáo và Marketing, đồng bộ về tư duy sáng tạo, giải pháp tối ưu, cơ sở hạ tầng hiện đại để nâng tầm sản phẩm, dịch vụ của mỗi bên mà chúng tôi có hân hạnh trở thành đối tác phục vụ
-					</p>
-					<p class="section-text">
-						Chúng tôi tin rằng bằng sự say mê sáng tạo, hạ tầng thiết bị tân tiến và tiềm lực tài chính đối ứng vững mạnh, LHMotion sẽ đem lại những sản phẩm, dịch vụ chất lượng, tin cậy, hứng khởi tới mỗi Quý Khách Hàng
-					</p>
+					<div class="section-text">
+						{!! $aboutUs['description'] !!}
+					</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-12 col-sm-12 p-20 aos-init aos-animate" data-aos="fade-left" data-aos-delay="500">
 				<div class="about-us-img">
-					<img src="img/about-us/au-main.jpg">
+					<img src="{{ asset($aboutUs['image']) }}">
 				</div>
 			</div>
 		</div>
@@ -183,6 +184,58 @@
 				<div class="equipment-item bg-secondary">
 					<img src="img/equipment/e1.png" alt="">
 					<span class="equipment-name">Other items</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="pt-40 pb-40" id="services">
+	<div class="page-padding">
+		<div class="container-large">
+			<div class="headline_component">
+				<div class="subheading">Services</div>
+				<div class="headline_divider"></div>
+			</div>
+			<div class="padding-bottom padding-xxhuge padding-top">
+				<div class="margin-top margin-large">
+					<h1 class="max-width-large">Films by Sam Kolder</h1>
+					<div class="margin-top margin-medium max-width-large">
+						<p class="text-size-medium">A collection of some of Sam's best work including drone reel compilations, <br>creative storytelling, travel vlogs &amp; client work.</p>
+					</div>
+				</div>
+				<div class="margin-top margin-huge">
+					<div class="works_component w-dyn-list">
+						<div role="list" class="works_list w-dyn-items">
+							@foreach($services as $key => $service)
+							@if($key % 2 == 0)
+							<div role="listitem" class="works_item w-dyn-item">
+								<iframe target="_top" width="854" height="480" src="{{ $service->url }}" frameBorder="0" scrolling="no"></iframe>
+								<div class="works_txt">
+									<h2 class="heading-small">{{ $service->name }}</h2>
+									<div class="margin-top margin-small max-width-large">
+										<div class="w-richtext">
+											<p>{{ $service->description }}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							@else
+							<div role="listitem" class="works_item w-dyn-item" style="flex-direction: row-reverse;">
+								<iframe target="_top" width="854" height="480" src="{{ $service->url }}" frameBorder="0" scrolling="no"></iframe>
+								<div class="works_txt">
+									<h2 class="heading-small">{{ $service->name }}</h2>
+									<div class="margin-top margin-small max-width-large">
+										<div class="w-richtext">
+											<p>{{ $service->description }}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							@endif
+							@endforeach
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -243,7 +296,7 @@
 								</div>
 								<div class="form-overlay"></div>
 								<div class="hide-tablet"></div>
-								<img src="{{ asset('img/contact-form.jpg') }}" loading="lazy" sizes="(max-width: 991px) 100vw, 876.921875px" class="form-image hide-tablet" style="opacity: 75%;">
+								<img src="{{ asset('img/contact-form.jpg') }}" loading="lazy" sizes="(max-width: 991px) 100vw, 876.921875px" class="form-image hide-tablet" style="opacity: 0.3;">
 							</div>
 						</div>
 					</div>

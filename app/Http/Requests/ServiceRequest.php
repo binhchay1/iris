@@ -36,8 +36,8 @@ class ServiceRequest extends FormRequest
             'name.required' => 'Tên không được để trống.',
             'name.string' => 'Tên không đúng định dạng.',
             'name.max' => 'Tên không vượt quá 255 kí tự.',
-            'description.required' => 'Giới tính không được để trống.',
-            'url.required' => 'Ảnh không được để trống.',
+            'description.required' => 'Nội dung không được để trống.',
+            'url.required' => 'Đường dẫn không được để trống.',
         ];
     }
 }

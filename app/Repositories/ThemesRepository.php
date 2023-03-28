@@ -53,4 +53,13 @@ class ThemesRepository extends BaseRepository
 
         return $query->get();
     }
+
+    public function getThemesAboutUs()
+    {
+        $query = $this->model->query();
+
+        $query = $query->where('type', 'about-us');
+
+        return $query->first();
+    }
 }
